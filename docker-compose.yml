@@ -46,6 +46,27 @@ services:
       dockerfile: Dockerfile.mariadb
     labels:
       lagoon.type: mariadb
+  filesync:
+    networks:
+      - amazeeio-network
+      - default
+    build:
+      context: .
+      dockerfile: Dockerfile.filesync
+    labels:
+      lagoon.type: filesync
+      lagoon.name: filesync
+    volumes:
+      - ./web:/app/web:delegated
+    depends_on:
+      - cli
+    expose:
+      - "8080"
+    environment:
+      - AMAZEEIO_URL=drupal.docker.amazee.io
+      - AMAZEEIO=AMAZEEIO
+      - AMAZEEIO_HTTP_PORT=8080
+
 networks:
   amazeeio-network:
     external: true
