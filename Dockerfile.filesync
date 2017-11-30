@@ -16,8 +16,8 @@ RUN mkdir -p /var/run/sshd
 
 ENV HOME=/app/docroot/sites/default/files
 
-ADD filesync/sshd /sshd
-RUN chmod 755 /sshd
+ADD filesync/entrypoint.sh /entrypoint.sh
+RUN chmod 755 /entrypoint.sh
 
 
 CMD ["/entrypoint.sh"]
