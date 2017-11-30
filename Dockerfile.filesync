@@ -20,7 +20,7 @@ ADD filesync/sshd /sshd
 RUN chmod 755 /sshd
 
 
-CMD ["/sshd"]
+CMD ["/entrypoint.sh"]
 
 ENV LAGOONSYNC_ROLE=master
 ENV LAGOONSYNC_DEST=other
