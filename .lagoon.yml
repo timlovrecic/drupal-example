@@ -1,5 +1,7 @@
 docker-compose-yaml: docker-compose.yml
 
+project: ci-drupal
+
 tasks:
   post-rollout:
     - run:
