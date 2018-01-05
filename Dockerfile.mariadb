@@ -1,1 +1,1 @@
-FROM amazeeio/centos7-mariadb10-drupal
+FROM amazeeio/alpine-mariadb10-drupal
