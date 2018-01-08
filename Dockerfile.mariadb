@@ -1,1 +1,1 @@
-FROM amazeeio/alpine-mariadb10-drupal
+FROM lagoon/alpine-mariadb10-drupal
